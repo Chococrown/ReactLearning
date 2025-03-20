@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+
+import FormComponent from "./Components/FormComponent";
+
+import Transaction from "./Components/Transaction";
+
 
 function App() {
+
+  const design1 = {color:"blue",textAlign:"center"}
+
+  const [items,setItems] = useState([])
+
+  const onAddNewItem = (newItem) =>{
+      setItems((prevItem) =>{
+      return [newItem,...prevItem]
+    })
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+
+      <h1 style = {design1}>แอปคำนวนรายรับ - รายจ่าย</h1>
+
+      <FormComponent onAddItem = {onAddNewItem} />
+
+      <Transaction items = {items} />
+
     </div>
   );
 }
