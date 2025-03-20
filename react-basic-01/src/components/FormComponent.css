@@ -1,0 +1,31 @@
+label{
+    display: inline-block;
+    margin: 10px o;
+    color:blue;
+}
+
+input{
+    border: 1px solid #dedede;
+    border-radius: 2px;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    background-color: white;
+}
+
+button{
+    background-color: pink;
+    color: black;
+    cursor: pointer;
+    display: block;
+    margin-top: 10px 0 30px;
+    padding: 10px;
+    font-size: 24px;
+    width: 100%;
+    font-weight: bolder;
+}
+
+input:focus{
+    outline: none;
+}
