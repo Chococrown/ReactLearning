@@ -1,39 +1,32 @@
-import React, {useState} from 'react'
-
+import React, { useState } from 'react';
 import './App.css';
-
-import TodoList from './todoList';
+import TodoList from './TodoList';
 
 function App() {
+  const [todoList, setTodoList] = useState([{ id: 1, text: "todo" }]);
+  const [text, setText] = useState("");
 
-  const [todoList, setTodoList] = useState(["todo"])
-  const [text, setText] = useState("")
-
-  const onTextChange = ({target: {value}}) => {
-    setText(value)
-  }
+  const onTextChange = ({ target: { value } }) => {
+    setText(value);
+  };
 
   const addTask = () => {
-    if (text.trim() === "") return; // ไม่เพิ่มถ้าเป็นค่าว่าง
-    setTodoList([...todoList, text]);
-    setText(""); // ล้าง input หลังเพิ่ม
+    if (text.trim() === "") return;
+    setTodoList([...todoList, { id: Date.now(), text }]);
+    setText("");
   };
 
   return (
     <div className="App">
-
-      <input 
-        type="text" 
-        value={text} 
-        onChange={ onTextChange } />
-
+      <input
+        type="text"
+        value={text}
+        onChange={onTextChange}
+      />
       <button onClick={addTask}>Add task</button>
-
-    <div>
-      <TodoList todoList = {todoList} />
-    </div>
-
-      
+      <div>
+        <TodoList todoList={todoList} />
+      </div>
     </div>
   );
 }

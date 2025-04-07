@@ -2,13 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Todo = ({ text }) => {
-    return (
-        <div> { text } </div>
-    )
-}
+  return <div>{text}</div>;
+};
 
 Todo.propTypes = {
-    text: PropTypes.string.isRequired,
-  };
+  text: PropTypes.string.isRequired,
+};
 
-export default Todo
+export default Todo;
