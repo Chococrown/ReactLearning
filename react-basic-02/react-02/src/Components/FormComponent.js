@@ -34,18 +34,18 @@ const FormComponent = (props)=>{
             <form onSubmit = {saveItem}>
                 <div>
                     <label>ชื่อรายการ</label>
-                    <input type="text" placeholder="ระบุชื่อรายการของคุณ" onChange={inputTiltle} 
-                    value={title}/>
+                    <input type = "text" placeholder = "ระบุชื่อรายการของคุณ" onChange = {inputTiltle} 
+                    value = {title}/>
                 </div>
 
                 <div>
                 <label>จำนวนเงิน</label>
-                <input type="number" placeholder="ระบุจำนวนเงิน" onChange={inputAmount}
-                value={amount}/>
+                <input type = "number" placeholder = "ระบุจำนวนเงิน" onChange = {inputAmount}
+                value = {amount}/>
                 </div>
 
                 <div>
-                    <button type="submit">เพิ่มข้อมูล</button>
+                    <button type = "submit">เพิ่มข้อมูล</button>
                 </div>
 
             </form>
