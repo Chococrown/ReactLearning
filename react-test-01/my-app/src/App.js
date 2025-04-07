@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 
 import './App.css';
 
-import TodoList from './TodoList';
+import TodoList from './todoList';
 
 function App() {
 
@@ -14,8 +14,10 @@ function App() {
   }
 
   const addTask = () => {
-    setTodoList([ ...todoList, text ])
-  }
+    if (text.trim() === "") return; // ไม่เพิ่มถ้าเป็นค่าว่าง
+    setTodoList([...todoList, text]);
+    setText(""); // ล้าง input หลังเพิ่ม
+  };
 
   return (
     <div className="App">
