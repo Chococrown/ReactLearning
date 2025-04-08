@@ -1,0 +1,38 @@
+
+*{
+    margin: 0;
+
+    box-sizing: border-box;
+}
+
+.header__00 {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 10px;
+
+    border: 3px solid blue;
+    border-radius: 15px;
+}
+
+.header__01 {
+    font-size: 20px;
+    font-weight: 600;
+    color: hsl(0, 0%, 0%);
+    align-items: center;
+    padding: 10px;
+}
+
+.header__02 {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.header__img__01 {
+    align-items: center;
+    cursor: pointer;
+}
